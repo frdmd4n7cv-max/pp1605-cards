@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>ПП-1605: Тренажёр ОТБ ВТ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="header">
+            <h1>📘 ПП-1605</h1>
+            <div class="stats" id="stats">0 / 0</div>
+        </div>
+        <div class="filter-bar">
+            <button data-filter="all" class="filter-btn active">Все</button>
+            <button data-filter="video" class="filter-btn">Видео</button>
+            <button data-filter="percent" class="filter-btn">Проценты</button>
+            <button data-filter="terms" class="filter-btn">Сроки</button>
+            <button data-filter="n2" class="filter-btn">Уровень N2</button>
+            <button data-filter="n3" class="filter-btn">Уровень N3</button>
+        </div>
+        <div class="card-container">
+            <div class="card" id="currentCard">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="question-icon">❓</div>
+                        <div class="question-text" id="questionText">Загрузка...</div>
+                        <div class="tap-hint">👆 нажмите для ответа</div>
+                    </div>
+                    <div class="card-back">
+                        <div class="answer-icon">✅</div>
+                        <div class="answer-text" id="answerText"></div>
+                        <div class="meta-info" id="metaInfo"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="controls">
+            <button id="prevBtn" class="nav-btn">◀ Предыдущая</button>
+            <button id="nextBtn" class="nav-btn">Следующая ▶</button>
+            <button id="shuffleBtn" class="action-btn">🎲 Перемешать</button>
+        </div>
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+    </div>
+    <script src="cards-data.js"></script>
+    <script src="script.js"></script>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</body>
+</html>
